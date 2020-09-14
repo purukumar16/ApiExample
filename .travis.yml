@@ -2,7 +2,7 @@ language: csharp
 mono: latest
 dotnet: 3.1.200
 before_install:
-  - cd src
+  - sudo apt-get install nunit-console
 script:
   - dotnet restore
   - msbuild
