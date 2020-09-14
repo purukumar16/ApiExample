@@ -5,4 +5,5 @@ before_install:
 before_script:
   - nuget restore ApiExample.sln
 after_script:
-  - nunit-console Tests/bin/Release/Tests.dll
+  - xbuild ./src/ApiExample.sln
+  - nunit-console NUnitTestProject1/bin/Release/NUnitTestProject1.dll
