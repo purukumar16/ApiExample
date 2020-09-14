@@ -1,11 +1,9 @@
 language: csharp
-solution: ApiExample.sln
+mono: latest
+dotnet: 3.1.200
 before_install:
-  - sudo apt-get install nunit-console
-before_script:
-  - nuget restore ApiExample.sln
-after_script:
-  - xbuild ./src/ApiExample.sln
-  - nunit-console NUnitTestProject1/bin/Release/NUnitTestProject1.dll
-  - dotnet build
-  - dotnet test
+  - cd src
+script:
+  - dotnet restore
+  - msbuild
+  - dotnet test ../NUnitTestProject1\bin\Debug\netcoreapp3.1/NUnitTestProject1.dll
