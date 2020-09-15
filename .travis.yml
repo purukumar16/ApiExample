@@ -11,6 +11,6 @@ deploy:
   provider: heroku
   api_key:
     secure: 10db00b9-74af-4fa0-a1ad-d47c36e6fdfd
-  app: api-deployement
+  app: api-deployment-ex
   on:
-    repo: purukumar16/https-github.com-Sg-Engineering-Stream-Hackathon-TravisCI_Test
+    repo: purukumar16/ApiExample
